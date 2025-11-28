@@ -1,5 +1,11 @@
 package com.cc.java;
 
+import com.cc.java.bees.Drone;
+import com.cc.java.bees.HoneyBee;
+import com.cc.java.bees.Queen;
+import com.cc.java.bees.Worker;
+import com.cc.java.birds.Bird;
+
 public class App {
     
     public static void main(String[] args) {
@@ -12,6 +18,7 @@ public class App {
         pollObj(queen);
         pollObj(worker);
         pollObj(drone);
+
         pollObj(bird);
    
 
@@ -23,6 +30,13 @@ public class App {
         output(bee.fly());
         output("-------------------");
     }
+    // Overloading für Bird
+     private static void pollObj(Bird obj){
+        output(obj.hasFeathers());
+        output(obj.fly());
+        output("-------------------");
+    }
+
 
    
     private static void output(String outputStr) {
